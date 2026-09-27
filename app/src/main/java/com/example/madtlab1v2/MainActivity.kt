@@ -11,20 +11,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val myTextView: TextView = findViewById(R.id.myTextView)
-        val myButton: Button = findViewById(R.id.myButton)
-        val colorButton: Button = findViewById(R.id.colorButton)
-        val bgColorButton: Button = findViewById(R.id.bgColorButton)
+        val MyTextView: TextView = findViewById(R.id.myTextView)
+        val MyButton: Button = findViewById(R.id.myButton)
+        val ColorButton: Button = findViewById(R.id.colorButton)
+        val BgColorButton: Button = findViewById(R.id.bgColorButton)
 
-        myButton.setOnClickListener {
-            myTextView.text = "Button Clicked!"
+        MyButton.setOnClickListener {
+            MyTextView.text = "Button Clicked!"
         }
 
-        colorButton.setOnClickListener {
-            myTextView.setTextColor(Color.RED)
+        ColorButton.setOnClickListener {
+            MyTextView.setTextColor(Color.RED)
         }
 
-        bgColorButton.setOnClickListener {
+        BgColorButton.setOnClickListener {
             findViewById<android.widget.LinearLayout>(android.R.id.content).let {
                 it.rootView.setBackgroundColor(Color.YELLOW)
             }
